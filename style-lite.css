@@ -146,7 +146,13 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-board__price { margin-left: auto; }
 }
 
-.s-toprating { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; color: inherit; text-decoration: none; }
-.s-toprating b { font-size: 1.1rem; }
-.s-toprating u { text-underline-offset: 3px; }
+.s-toprating { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px; color: inherit; text-decoration: none; }
+.s-toprating__row { display: inline-flex; align-items: center; gap: 8px; }
+.s-toprating b { font-size: 1.1rem; font-weight: 700; }
+.s-toprating .s-reviews__stars { font-size: 1rem; }
+.s-toprating u { font-size: .92rem; font-weight: 400; color: var(--c-ink-soft); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .s-toprating:hover u { color: var(--c-accent-deep, var(--c-accent)); }
+.s-facts li { display: flex; align-items: center; }
+
+.s-hero__rating { margin-top: 22px; }
+@media (min-width: 861px) { .s-facts { grid-template-columns: repeat(2, 1fr); } }
